@@ -1,11 +1,11 @@
-# ![LOGO](logo.png) AWS Cost and Usage Report Service MSP Connector
+# ![LOGO](logo.png) AWS Cost and Usage Report Service **flow**ground Connector
 
 ## Description
 
-A generated MSP connector for the AWS Cost and Usage Report Service API (version 2017-01-06).
+A generated **flow**ground connector for the AWS Cost and Usage Report Service API (version 2017-01-06).
 
 Generated from: https://api.apis.guru/v2/specs/amazonaws.com/cur/2017-01-06/swagger.json<br/>
-Generated at: 2019-05-07T11:15:37+03:00
+Generated at: 2019-05-07T17:35:17+03:00
 
 ## API Description
 
@@ -58,7 +58,7 @@ Supported authorization schemes:
 
 ## License
 
-flowground :- Telekom iPaaS / amazonaws-com-cur-connector<br/>
+**flow**ground :- Telekom iPaaS / amazonaws-com-cur-connector<br/>
 Copyright © 2019, [Deutsche Telekom AG](https://www.telekom.de)<br/>
 contact: flowground@telekom.de
 
