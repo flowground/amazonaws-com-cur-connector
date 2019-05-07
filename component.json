@@ -1,0 +1,91 @@
+{
+    "title": "AWS Cost and Usage Report Service",
+    "description": "<p>The AWS Cost and Usage Report API enables you to programmatically create, query, and delete AWS Cost and Usage report definitions.</p> <p>AWS Cost and Usage reports track the monthly AWS costs and usage associated with your AWS account. The report contains line items for each unique combination of AWS product, usage type, and operation that your AWS account uses. You can configure the AWS Cost and Usage report to show only the data that you want, using the AWS Cost and Usage API.</p> <p>Service Endpoint</p> <p>The AWS Cost and Usage Report API provides the following endpoint:</p> <ul> <li> <p>cur.us-east-1.amazonaws.com</p> </li> </ul>",
+    "docsUrl": "https://aws.amazon.com/cur/",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/cur/2017-01-06/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://cur.amazonaws.com/",
+                    "http://cur.amazonaws.com/",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            },
+            "hmac": {
+                "label": "Authorization (hmac)",
+                "viewClass": "TextFieldView",
+                "note": "Amazon Signature authorization v4"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "DeleteReportDefinition": {
+            "main": "./lib/actions/DeleteReportDefinition.js",
+            "title": "Deletes the specified report.",
+            "description": "Deletes the specified report.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteReportDefinition.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DescribeReportDefinitions": {
+            "main": "./lib/actions/DescribeReportDefinitions.js",
+            "title": "Lists the AWS Cost and Usage reports available to this account.",
+            "description": "Lists the AWS Cost and Usage reports available to this account.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DescribeReportDefinitions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PutReportDefinition": {
+            "main": "./lib/actions/PutReportDefinition.js",
+            "title": "Creates a new report using the description that you provide.",
+            "description": "Creates a new report using the description that you provide.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PutReportDefinition.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}
