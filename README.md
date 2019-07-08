@@ -5,7 +5,7 @@
 A generated **flow**ground connector for the AWS Cost and Usage Report Service API (version 2017-01-06).
 
 Generated from: https://api.apis.guru/v2/specs/amazonaws.com/cur/2017-01-06/swagger.json<br/>
-Generated at: 2019-05-07T17:35:17+03:00
+Generated at: 2019-07-08T14:12:39+03:00
 
 ## API Description
 
@@ -17,7 +17,8 @@ Supported authorization schemes:
 - API Key
 ## Actions
 
-### Deletes the specified report.
+### DeleteReportDefinition
+> Deletes the specified report.<br/>
 
 #### Input Parameters
 * `Action` - _required_
@@ -30,11 +31,12 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Lists the AWS Cost and Usage reports available to this account.
+### DescribeReportDefinitions
+> Lists the AWS Cost and Usage reports available to this account.<br/>
 
 #### Input Parameters
-* `MaxResults` - _optional_ - Pagination limit
-* `NextToken` - _optional_ - Pagination token
+* `MaxResults` - _optional_ - Pagination limit<br/>
+* `NextToken` - _optional_ - Pagination token<br/>
 * `X-Amz-Content-Sha256` - _optional_
 * `X-Amz-Date` - _optional_
 * `X-Amz-Algorithm` - _optional_
@@ -43,7 +45,8 @@ Supported authorization schemes:
 * `X-Amz-Signature` - _optional_
 * `X-Amz-SignedHeaders` - _optional_
 
-### Creates a new report using the description that you provide.
+### PutReportDefinition
+> Creates a new report using the description that you provide.<br/>
 
 #### Input Parameters
 * `Action` - _required_
